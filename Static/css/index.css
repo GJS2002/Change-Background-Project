@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Raleway&display=swap");
+:root {
+  --height: 0vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 2px;
+}
+
+.modal {
+  position: fixed;
+  overflow: hidden;
+  height: var(--height);
+  top: 0%;
+  background: white;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+body {
+  background: center/cover no-repeat url(/Static/images/Phone.jpg);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .btn-background {
+  position: relative;
+  font-size: 1.2em;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  border: 2px solid black;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+body .btn-background::before {
+  content: '';
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#fff), to(transparent));
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  height: 100%;
+  width: 100%;
+  right: 100%;
+  top: 0%;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+body .btn-background:hover, body .btn-background :focus {
+  background: #0d0080;
+}
+
+body .btn-background:hover::before, body .btn-background :focus::before {
+  right: -100%;
+}
+/*# sourceMappingURL=index.css.map */
