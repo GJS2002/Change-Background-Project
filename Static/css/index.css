@@ -20,6 +20,10 @@
   cursor: pointer;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .modal {
   position: fixed;
   overflow: hidden;
@@ -43,16 +47,30 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 20vh 20vh 20vh;
-      grid-template-rows: 20vh 20vh 20vh;
+  -ms-grid-rows: 17vh 17vh 17vh;
+      grid-template-rows: 17vh 17vh 17vh;
   margin: 3em 1em;
   border: 2px solid white;
+  background: white;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (min-width: 568px) and (max-width: 823px) {
+  .images {
+    width: 50%;
+    margin-top: 0;
+    -ms-grid-rows: 20vh 20vh 20vh;
+        grid-template-rows: 20vh 20vh 20vh;
+  }
 }
 
 .images img {
   border: 2px solid white;
   width: 100%;
   height: 100%;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
 }
 
 .btn-close {
@@ -71,7 +89,7 @@
 }
 
 body {
-  background: center/cover no-repeat url(/Static/images/Phone.jpg);
+  background: center/cover no-repeat url("/Static/images/Phone.jpg");
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,7 +106,7 @@ body .btn-background {
   position: relative;
   font-size: 1.2em;
   padding: 1em;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   font-weight: bold;
   border: 2px solid black;
@@ -116,5 +134,9 @@ body .btn-background:hover, body .btn-background :focus {
 
 body .btn-background:hover::before, body .btn-background :focus::before {
   right: -100%;
+}
+
+.active {
+  opacity: .5;
 }
 /*# sourceMappingURL=index.css.map */
