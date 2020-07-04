@@ -43,13 +43,14 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 5px;
-  padding: 1em;
+  -ms-grid-rows: 20vh 20vh 20vh;
+      grid-template-rows: 20vh 20vh 20vh;
+  margin: 3em 1em;
+  border: 2px solid white;
 }
 
 .images img {
+  border: 2px solid white;
   width: 100%;
   height: 100%;
 }
@@ -60,7 +61,8 @@
   font-weight: bold;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding: 1em;
+  margin: .5em;
+  padding: .5em;
 }
 
 .btn-close:hover, .btn-close :focus {

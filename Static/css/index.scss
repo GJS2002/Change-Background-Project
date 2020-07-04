@@ -38,11 +38,12 @@ $ff-secondary: 'Cormorant Garamond', serif;
 .images{
      display: grid;
      grid-template-columns: 1fr 1fr;
-     grid-template-rows: 1fr 1fr 1fr;
-     grid-gap: 5px;
-     padding: 1em;
+     grid-template-rows: 20vh 20vh 20vh;
+     margin: 3em 1em;
+     border: 2px solid white;
 
      img{
+          border: 2px solid white;
           width: 100%;
           height: 100%;
      }
@@ -53,7 +54,8 @@ $ff-secondary: 'Cormorant Garamond', serif;
      font-size: 2em;
      font-weight: bold;
      align-self: flex-end;
-     padding: 1em;
+     margin: .5em;
+     padding: .5em;
 
      &:hover, :focus{
           transform: rotate(360deg);
