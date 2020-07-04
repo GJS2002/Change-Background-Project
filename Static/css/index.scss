@@ -81,6 +81,49 @@ $ff-secondary: 'Cormorant Garamond', serif;
           width: var(--width);
           left: 0%;
      }
+
+     @include mobileSide{
+          flex-direction: row;
+     }
+
+     form{
+          margin: 1em;
+          display: flex;
+          flex-direction: column;
+          color: white;
+          font-family: $ff-primary;
+          width: max-content;
+          align-self: center;
+          text-align: center;
+          font-weight: bold;
+          width: 40%;
+
+          input{
+               padding: .5em;
+               margin: .5em 0 .5em 0;
+               background: grey;
+               border: none;
+
+               &:focus{
+                    outline: none;
+                    border: 2px solid white;
+                    background: rgb(80, 80, 80);
+               }
+          }
+
+          button{
+               color: white;
+               font-family: $ff-primary;
+               padding: .5em;
+               border: 2px solid white;
+               font-weight: bold;
+
+               &:hover, :focus{
+                    background: white;
+                    color: black;
+               }
+          }
+     }
      
 
      
@@ -97,7 +140,6 @@ $ff-secondary: 'Cormorant Garamond', serif;
 
      @include mobileSide{
           width: 50%;
-          margin-top: 0;
           grid-template-rows: 20vh 20vh 20vh;
      }
 

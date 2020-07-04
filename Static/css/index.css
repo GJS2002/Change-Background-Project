@@ -62,6 +62,62 @@
   }
 }
 
+@media (min-width: 568px) and (max-width: 823px) {
+  .modal {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.modal form {
+  margin: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+}
+
+.modal form input {
+  padding: .5em;
+  margin: .5em 0 .5em 0;
+  background: grey;
+  border: none;
+}
+
+.modal form input:focus {
+  outline: none;
+  border: 2px solid white;
+  background: #505050;
+}
+
+.modal form button {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  padding: .5em;
+  border: 2px solid white;
+  font-weight: bold;
+}
+
+.modal form button:hover, .modal form button :focus {
+  background: white;
+  color: black;
+}
+
 .images {
   display: -ms-grid;
   display: grid;
@@ -79,7 +135,6 @@
 @media (min-width: 568px) and (max-width: 823px) {
   .images {
     width: 50%;
-    margin-top: 0;
     -ms-grid-rows: 20vh 20vh 20vh;
         grid-template-rows: 20vh 20vh 20vh;
   }
