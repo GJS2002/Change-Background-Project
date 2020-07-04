@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Raleway&display=swap");
 :root {
   --height: 0vh;
+  --width: 0vw;
 }
 
 * {
@@ -40,6 +41,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1400px) and (max-width: 3000px) {
+  .modal {
+    height: 100vh;
+    width: var(--width);
+    left: 0%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1399px) {
+  .modal {
+    height: 100vh;
+    width: var(--width);
+    left: 0%;
+  }
 }
 
 .images {
@@ -65,12 +85,33 @@
   }
 }
 
+@media (min-width: 1000px) and (max-width: 1399px) {
+  .images {
+    -ms-grid-rows: 14vh 14vh 14vh;
+        grid-template-rows: 14vh 14vh 14vh;
+  }
+}
+
+@media (max-width: 768px) and (min-height: 1024px) {
+  .images {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1024px) and (min-height: 1366px) {
+  .images {
+    -ms-grid-rows: 10vh 10vh 10vh;
+        grid-template-rows: 10vh 10vh 10vh;
+  }
+}
+
 .images img {
   border: 2px solid white;
   width: 100%;
   height: 100%;
   -webkit-transition: .3s linear;
   transition: .3s linear;
+  cursor: pointer;
 }
 
 .btn-close {
@@ -79,17 +120,25 @@
   font-weight: bold;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin: .5em;
   padding: .5em;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+@media (min-width: 1000px) {
+  .btn-close {
+    font-size: 4em;
+  }
 }
 
 .btn-close:hover, .btn-close :focus {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+  color: blue;
 }
 
 body {
-  background: center/cover no-repeat url("/Static/images/Phone.jpg");
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
