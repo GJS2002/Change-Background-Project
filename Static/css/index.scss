@@ -157,6 +157,7 @@ $ff-secondary: 'Cormorant Garamond', serif;
 
      @include desktopSmall{
           grid-template-rows: 14vh 14vh 14vh;
+          
      }
 
      @include IpadSmall{
@@ -181,18 +182,19 @@ $ff-secondary: 'Cormorant Garamond', serif;
      font-size: 2em;
      font-weight: bold;
      align-self: flex-end;
-     padding: .5em;
+     padding: .2em 0 .2em .2em;
+     margin-right: 1rem;
      position: absolute;
      top: 0%;
      right: 0%;
 
      @media (min-width: 1000px) {
-          font-size: 4em;
+          font-size: 2em;
      }
 
      &:hover, :focus{
           transform: rotate(360deg);
-          color: blue;
+          color: pink;
      }
 }
 

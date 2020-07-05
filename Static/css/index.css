@@ -188,7 +188,8 @@
   font-weight: bold;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding: .5em;
+  padding: .2em 0 .2em .2em;
+  margin-right: 1rem;
   position: absolute;
   top: 0%;
   right: 0%;
@@ -196,14 +197,14 @@
 
 @media (min-width: 1000px) {
   .btn-close {
-    font-size: 4em;
+    font-size: 2em;
   }
 }
 
 .btn-close:hover, .btn-close :focus {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  color: blue;
+  color: pink;
 }
 
 body {

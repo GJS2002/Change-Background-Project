@@ -53,7 +53,6 @@ formBtn.addEventListener('click', e => {
           label.textContent = 'Please enter a valid link!'
      }
      input.value = '';
-
      setTimeout(() => {label.textContent = 'Link to image';}, 3000);
      
 });
