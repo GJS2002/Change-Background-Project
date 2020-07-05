@@ -92,11 +92,18 @@
   width: 40%;
 }
 
+@media (min-width: 1400px) and (max-width: 3000px) {
+  .modal form {
+    font-size: 1.25rem;
+  }
+}
+
 .modal form input {
   padding: .5em;
   margin: .5em 0 .5em 0;
-  background: grey;
+  background: #6d6d6d;
   border: none;
+  color: white;
 }
 
 .modal form input:focus {
@@ -116,6 +123,12 @@
 .modal form button:hover, .modal form button :focus {
   background: white;
   color: black;
+}
+
+@media (min-width: 1400px) and (max-width: 3000px) {
+  .modal form button {
+    font-size: 1.25rem;
+  }
 }
 
 .images {
@@ -219,6 +232,12 @@ body .btn-background {
   transition: .3s linear;
 }
 
+@media (min-width: 1400px) and (max-width: 3000px) {
+  body .btn-background {
+    font-size: 2em;
+  }
+}
+
 body .btn-background::before {
   content: '';
   position: absolute;
@@ -241,6 +260,6 @@ body .btn-background:hover::before, body .btn-background :focus::before {
 }
 
 .active {
-  opacity: .5;
+  opacity: .4;
 }
 /*# sourceMappingURL=index.css.map */

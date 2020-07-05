@@ -56,6 +56,8 @@ $ff-secondary: 'Cormorant Garamond', serif;
      &:focus{
           outline: none;
      }
+
+     
 }
 
 .modal{
@@ -98,11 +100,16 @@ $ff-secondary: 'Cormorant Garamond', serif;
           font-weight: bold;
           width: 40%;
 
+          @include desktopBig{
+               font-size: 1.25rem;
+          }
+
           input{
                padding: .5em;
                margin: .5em 0 .5em 0;
-               background: grey;
+               background: rgb(109, 109, 109);
                border: none;
+               color: white;
 
                &:focus{
                     outline: none;
@@ -122,6 +129,11 @@ $ff-secondary: 'Cormorant Garamond', serif;
                     background: white;
                     color: black;
                }
+
+               @include desktopBig{
+                    font-size: 1.25rem;
+               }
+               
           }
      }
      
@@ -202,6 +214,10 @@ body{
           overflow: hidden;
           transition: .3s linear;
 
+          @include desktopBig{
+               font-size: 2em;
+          }
+
           &::before{
                content: '';
                position: absolute;
@@ -224,5 +240,5 @@ body{
 }
 
 .active{
-     opacity: .5;
+     opacity: .4;
 }

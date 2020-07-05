@@ -3,6 +3,9 @@ const btnClose = document.querySelector(".btn-close")
 const modal = document.querySelector(".modal");
 const images = document.querySelectorAll("img");
 const body = document.querySelector("body");
+const input = document.querySelector("input");
+const formBtn = document.querySelector(".btn-form"); 
+const label = document.querySelector("label");
 let src;
 
 btnBackground.addEventListener('click', () => {
@@ -39,3 +42,18 @@ images.forEach(img => {
      });
 });
 
+formBtn.addEventListener('click', e => {
+     e.preventDefault();
+     let btn = e.currentTarget;
+     let link = input.value;
+     if(link.includes("https://")){
+          body.style.background = `center / cover no-repeat url(${link})`;
+          label.textContent = 'Background set!'
+     } else {
+          label.textContent = 'Please enter a valid link!'
+     }
+     input.value = '';
+
+     setTimeout(() => {label.textContent = 'Link to image';}, 3000);
+     
+});
