@@ -46,7 +46,7 @@ formBtn.addEventListener('click', e => {
      e.preventDefault();
      let btn = e.currentTarget;
      let link = input.value;
-     if(link.includes("https://")){
+     if(link.includes("?id=")){
           body.style.background = `center / cover no-repeat url(${link})`;
           label.textContent = 'Background set!'
      } else {
